@@ -1,11 +1,8 @@
-'''import os,shutil
+import os,shutil
 path = r"C:/Users/Manar/Downloads/" 
 
-#ide = organisere fra den current path du arbejder med
 
-#Do Folders and check type files and store them correctly
-
-#Shows all files in the path with their path
+# Shows all files in the path with their path
 os.listdir(path)
 files = os.listdir(path)
 
@@ -18,7 +15,7 @@ for loop in range(len(folder_names)):
 
 #Move the files to the correct folder
 for file in files:
-    if ".pdf" in file and not os.path.exists(path + "pdf files/" + file):   #If a file ending in csv isnot in the path with the correct folder, it will be moved
+    if ".pdf" in file and not os.path.exists(path + "pdf files/" + file):   #If a file ending in csv is not in the path with the correct folder, it will be moved
         shutil.move(path+file, path+ "pdf files/"+file)
     elif ".csv" in file and not os.path.exists(path+ "csv files/"+file):
         shutil.move(path+file, path+ "csv files/"+file)
@@ -36,5 +33,3 @@ for file in files:
         shutil.move(path+file, path+ "zip files/"+file)
     elif ".py" in file and not os.path.exists(path+ "python files/"+file):
         shutil.move(path+file, path+ "python files/"+file)
-
-'''
